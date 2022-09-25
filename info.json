@@ -1,7 +1,7 @@
 {
   "name": "copy-paste-recipe-signals-to-combinator",
   "version": "2.0.0",
-  "title": "Copy-Paste Recipe Signals",
+  "title": "Copy-Paste Recipe Signals to Combinator (\\w LTN Combinator support)",
   "author": "Flydiverny",
   "homepage": "https://github.com/Flydiverny/copy-paste-recipe-signals",
   "factorio_version": "1.1",
