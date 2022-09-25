@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2022-09-25
+  Features:
+    - Allow pasting to LTN Combinator
+    - LTN Combinator signals should be kept when pasting to an LTN combinator
+  Changes:
+    - Changes default player settings to only paste ingredients.
+    - Player-specific setting to change product multiplier now defaults to 0 (off)
+    - Player-specific setting to include recipe time in ticks now defaults to false
+    - Player-specific setting to include recipe time in seconds now defaults to false
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2021-05-06
   Features:

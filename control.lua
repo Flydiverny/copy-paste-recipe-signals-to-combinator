@@ -9,7 +9,8 @@ local function expected_amount(product)
 end
 
 script.on_event(defines.events.on_entity_settings_pasted, function(event)
-  if event.destination.valid and event.destination.name ~= "constant-combinator" then
+  if event.destination.valid and event.destination.name ~= "constant-combinator" and
+      event.destination.name ~= "ltn-combinator" then
     return
   end
   if not event.source.valid then
@@ -68,13 +69,20 @@ script.on_event(defines.events.on_entity_settings_pasted, function(event)
       })
     end
 
+    local signalsStart = event.destination.name == "ltn-combinator" and (14) or 0
+
     for index, signal in pairs(signals) do
-      if behavior.signals_count >= index then
-        behavior.set_signal(index, signal)
+      local setIndex = (index + signalsStart)
+      if behavior.signals_count >= setIndex then
+        behavior.set_signal(setIndex, signal)
+
       end
     end
 
-    for index = table_size(signals) + 1, behavior.signals_count do
+    local clearSignalsStart = table_size(signals) + signalsStart
+
+    for index = clearSignalsStart + 1, behavior.signals_count do
+
       behavior.set_signal(index, nil)
     end
   end

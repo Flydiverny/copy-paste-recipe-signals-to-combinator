@@ -1,11 +1,10 @@
 {
-  "name": "copy-paste-recipe-signals",
-  "version": "1.1.1",
+  "name": "copy-paste-recipe-signals-to-combinator",
+  "version": "2.0.0",
   "title": "Copy-Paste Recipe Signals",
-  "author": "Zomis",
-  "contact": "zomis2k@hotmail.com",
-  "homepage": "https://github.com/Zomis/FactorioMods",
+  "author": "Flydiverny",
+  "homepage": "https://github.com/Flydiverny/copy-paste-recipe-signals",
   "factorio_version": "1.1",
   "dependencies": ["base >= 1.1"],
-  "description": "Copying settings from an Assembling Machine to a Constant Combinator will paste signals describing the recipe"
+  "description": "Copying settings from an Assembling Machine to a Constant Combinator or LTN Combinator will paste signals describing the recipe"
 }
