@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 2022-09-25
+  Changes:
+    - Don't crash if LTN Combinator is not enabled
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2022-09-25
   Features:
     - Allow pasting to LTN Combinator
     - LTN Combinator signals should be kept when pasting to an LTN combinator

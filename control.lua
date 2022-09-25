@@ -69,20 +69,21 @@ script.on_event(defines.events.on_entity_settings_pasted, function(event)
       })
     end
 
-    local signalsStart = event.destination.name == "ltn-combinator" and (14) or 0
+    -- The ltn-combinator has 28 signals, however the 14 first signals should
+    -- be used for LTN specific signals, we try to preserve these so LTN configurations is not lost
+    local signalsStartIndex = event.destination.name == "ltn-combinator" and (14) or 0
 
     for index, signal in pairs(signals) do
-      local setIndex = (index + signalsStart)
+      local setIndex = (index + signalsStartIndex)
       if behavior.signals_count >= setIndex then
         behavior.set_signal(setIndex, signal)
 
       end
     end
 
-    local clearSignalsStart = table_size(signals) + signalsStart
+    local clearSignalsStartIndex = table_size(signals) + signalsStartIndex
 
-    for index = clearSignalsStart + 1, behavior.signals_count do
-
+    for index = clearSignalsStartIndex + 1, behavior.signals_count do
       behavior.set_signal(index, nil)
     end
   end
